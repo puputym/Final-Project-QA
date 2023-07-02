@@ -14,4 +14,4 @@ Team member: Aulia Bayu M, Yuan H Siagian, Sudaryadi, Puput Yuniar Maulida, Arif
 1. npm install --save-dev mochawesome
 2. npm install --save-dev mocha@5.2.0
 3. npm cypress run --reporter mochawesome
-4.you can see the result at folder mochawesome-report
+4. you can see the result at folder mochawesome-report
