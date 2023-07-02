@@ -23,4 +23,8 @@ export default class HomePage {
   clickCartLink() {
     cy.get(elementLocators.cartLink).click();
   }
+
+  clickCartButton() {
+    cy.get(elementLocators.clickCartButton).click();
+  }
 }

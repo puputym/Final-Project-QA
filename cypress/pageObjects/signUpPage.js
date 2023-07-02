@@ -10,6 +10,14 @@ export default class SignUpPage {
     }
   
     verifySignUpSuccess() {
-      cy.get(elementLocators.alertBox).should('contain.text', 'Sign up successful.');
+      cy.on('window:alert', (str) => {
+        expect(str).to.equal(`Sign up successful.`)
+      })
+    }
+
+    verifySignUpFailed() {
+      cy.on('window:alert', (str) => {
+        expect(str).to.equal(`Please fill out Username and Password.`)
+      })
     }
   }

@@ -20,4 +20,14 @@ export default class OrderPage {
     verifyPurchaseSuccess() {
       cy.get(elementLocators.alertBoxPurchase).should('contain.text', 'Thank you for your purchase!');
     }
+
+    fillOrderDetailsFailed() {
+    }
+
+    verifyPutchaseFailed() {
+      cy.on('window:alert', (str) => {
+        expect(str).to.equal(`Please fill out Name and Creditcard.`)
+      })
+    }
+
   }

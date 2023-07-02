@@ -16,26 +16,47 @@ describe('DemoBlaze', () => {
     homePage.visitHomePage();
   });
 
-  it('should sign up', () => {
+  it('should sign up successfully', () => {
     homePage.clickSignUpLink();
     signUpPage.signUp(testData.username, testData.password);
-    //signUpPage.verifySignUpSuccess();
+    signUpPage.verifySignUpSuccess();
+  });
+
+  it('should sign up failed', () => {
+    homePage.clickSignUpLink();
+    signUpPage.signUp(testData.username, testData.password);
+    signUpPage.verifySignUpFailed();
   });
 
   it('should log in and log out', () => {
     homePage.clickLoginLink();
     loginPage.login(testData.username, testData.password);
-    loginPage.verifyLoginSuccess(testData.username);
+    loginPage.verifyLoginSuccess();
     loginPage.clickLogoutLink();
     loginPage.verifyLogoutSuccess();
   });
 
-  it('should add item to cart and place order', () => {
+  it('should add item to cart ', () => {
+    homePage.clickCartLink();
     homePage.addToCart();
-    //homePage.clickCartLink();
+    cartPage.verifyAddCartSuccess();
+  });
+
+  it('should place order successfully', () => {
+    homePage.clickCartButton();
     cartPage.placeOrder();
     orderPage.fillOrderDetails(testData.name, testData.country, testData.city, testData.creditCard, testData.month, testData.year);
     orderPage.purchaseOrder();
     orderPage.verifyPurchaseSuccess();
   });
+
+  it('should place order failed', () => {
+    homePage.clickCartButton();
+    cartPage.placeOrder();
+    orderPage.fillOrderDetailsFailed();
+    orderPage.purchaseOrder();
+    orderPage.verifyPutchaseFailed();
+  });
+
+
 });
