@@ -5,6 +5,7 @@ export class ElementLocators {
     addToCartButtons = '#tbodyid > div.row > div > a';
     cartLink = '#tbodyid > div:nth-child(1) > div > div > h4 > a';
     clickCartButton = '#navbarExample > ul > li:nth-child(4) > a'
+    contactMenu = '#navbarExample > ul > li:nth-child(2) > a';
   
     // Sign Up Page
     signUpUsernameInput = '#sign-username';
@@ -34,6 +35,11 @@ export class ElementLocators {
   
     // Alert Box
     alertBoxPurchase = 'body > div.sweet-alert.showSweetAlert.visible';
-    alert = 'window:alert';
+
+      // Contact Page
+    contactNameInput = '#recipient-name';
+    contactEmailInput = '#recipient-email';
+    contactMessageInput = '#message-text';
+    contactSubmitButton = '#exampleModal > div > div > div.modal-footer > button.btn.btn-primary';
   }
   

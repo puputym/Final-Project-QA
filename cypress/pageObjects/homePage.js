@@ -27,4 +27,8 @@ export default class HomePage {
   clickCartButton() {
     cy.get(elementLocators.clickCartButton).click();
   }
+  
+  clickContactMenu() {
+    cy.get(elementLocators.contactMenu).click();
+  }
 }

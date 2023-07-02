@@ -1,13 +1,16 @@
 {
-    "username": "JohnDoe",
+    "username": "Puputy",
     "password": "Password123",
-    "name": "John Doe",
+    "name": "Puputy",
     "country": "United States",
     "city": "New York",
     "creditCard": "1234567890123456",
     "month": "12",
     "year": "2023",
     "viewportWidth": 1280,
-    "viewportHeight": 720
+    "viewportHeight": 720,
+    "email" : "puput@mail.com",
+    "message" : "hallo apakah bisa membantu saya?"
+
   }
   

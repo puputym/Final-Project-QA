@@ -4,6 +4,7 @@ import LoginPage from '../pageObjects/loginPage';
 import CartPage from '../pageObjects/cartPage';
 import OrderPage from '../pageObjects/orderPage';
 import testData from '../fixtures/testData.json';
+import ContactMenu from '../pageObjects/contactMenu';
 
 describe('DemoBlaze', () => {
   const homePage = new HomePage();
@@ -11,6 +12,7 @@ describe('DemoBlaze', () => {
   const loginPage = new LoginPage();
   const cartPage = new CartPage();
   const orderPage = new OrderPage();
+  const contactMenuPage = new ContactMenu();
 
   beforeEach(() => {
     homePage.visitHomePage();
@@ -58,5 +60,11 @@ describe('DemoBlaze', () => {
     orderPage.verifyPutchaseFailed();
   });
 
+  it('should contact the menu', () => {
+    homePage.clickContactMenu();
+    contactMenuPage.fillContactForm(testData.name, testData.email, testData.message);
+    contactMenuPage.submitContactForm();
+    contactMenuPage.verifySubmissionSuccess();
+  });
 
 });
