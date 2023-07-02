@@ -1,0 +1,14 @@
+{
+  "name": "final-project-qa",
+  "version": "1.0.0",
+  "description": "final project QA",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "puput",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.16.0"
+  }
+}
